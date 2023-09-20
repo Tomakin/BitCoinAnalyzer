@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  bitcoinanalyzer.api:
+    image: bitcoinanalyzerapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+  
+  bitcoinanalyzer.client:
+    image: client
+    build:
+      context: ./BitCoinAnalyzer.Client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:80
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:latest
+    ports:
+      - 1433:1433
+    environment:
+      - SA_PASSWORD=r00t.R00T
+      - ACCEPT_EULA=Y

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCoinAnalyzer.API", "BitCoinAnalyzer.API\BitCoinAnalyzer.API.csproj", "{B567E67E-5C4C-4685-BBEE-AB267FD7A9E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitCoinAnalyzer.Core", "BitCoinAnalyzer.Core\BitCoinAnalyzer.Core.csproj", "{C8487D3D-D71A-4ADF-9A6A-C287BCE895D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitCoinAnalyzer.Data", "BitCoinAnalyzer.Data\BitCoinAnalyzer.Data.csproj", "{E49301E8-AFEF-4BEC-AC03-4DC10AFE5977}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitCoinAnalyzer.Entity", "BitCoinAnalyzer.Entity\BitCoinAnalyzer.Entity.csproj", "{D2163758-C45B-40A1-B687-563EAA3B0D0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitCoinAnalyzer.Service", "BitCoinAnalyzer.Service\BitCoinAnalyzer.Service.csproj", "{C5F3C35F-80A3-443F-A4E1-6529213542C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B567E67E-5C4C-4685-BBEE-AB267FD7A9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B567E67E-5C4C-4685-BBEE-AB267FD7A9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B567E67E-5C4C-4685-BBEE-AB267FD7A9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B567E67E-5C4C-4685-BBEE-AB267FD7A9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8487D3D-D71A-4ADF-9A6A-C287BCE895D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8487D3D-D71A-4ADF-9A6A-C287BCE895D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8487D3D-D71A-4ADF-9A6A-C287BCE895D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8487D3D-D71A-4ADF-9A6A-C287BCE895D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E49301E8-AFEF-4BEC-AC03-4DC10AFE5977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E49301E8-AFEF-4BEC-AC03-4DC10AFE5977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E49301E8-AFEF-4BEC-AC03-4DC10AFE5977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E49301E8-AFEF-4BEC-AC03-4DC10AFE5977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2163758-C45B-40A1-B687-563EAA3B0D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2163758-C45B-40A1-B687-563EAA3B0D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2163758-C45B-40A1-B687-563EAA3B0D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2163758-C45B-40A1-B687-563EAA3B0D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F3C35F-80A3-443F-A4E1-6529213542C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F3C35F-80A3-443F-A4E1-6529213542C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F3C35F-80A3-443F-A4E1-6529213542C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F3C35F-80A3-443F-A4E1-6529213542C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B19BC37-0372-4D39-8DC7-F000278DB134}
+	EndGlobalSection
+EndGlobal
