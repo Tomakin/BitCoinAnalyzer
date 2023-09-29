@@ -21,7 +21,7 @@ string connStr = builder.Configuration.GetConnectionString("Main");
 builder.Services.AddDbContext<BitCoinAnalyzerDbContext>(option => option.UseSqlServer(connStr));
 builder.Services.AddScoped<IDatabaseService, EfDatabaseService>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IBitCoinService, IBitCoinService>();
+builder.Services.AddScoped<IBitCoinService, BitCoinService>();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 var appSettingsSection = builder.Configuration.GetSection("AppSettings");
 var appSettings = appSettingsSection.Get<AppSettings>();
