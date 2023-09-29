@@ -10,9 +10,9 @@ namespace BitCoinAnalyzer.API.Controllers
     [Authorize]
     public class BitCoinController : BaseController
     {
-        BitCoinService _bitcoinService;
+        IBitCoinService _bitcoinService;
 
-        public BitCoinController(BitCoinService bitcoinService)
+        public BitCoinController(IBitCoinService bitcoinService)
         {
             _bitcoinService = bitcoinService;
         }

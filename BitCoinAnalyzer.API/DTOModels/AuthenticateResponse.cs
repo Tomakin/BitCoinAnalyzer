@@ -20,5 +20,9 @@ namespace BitCoinAnalyzer.API.DTOModels
             Username = user?.Username ?? "";
             Token = token;
         }
+        public AuthenticateResponse()
+        {
+                
+        }
     }
 }

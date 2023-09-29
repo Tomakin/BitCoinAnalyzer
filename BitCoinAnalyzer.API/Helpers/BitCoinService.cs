@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BitCoinAnalyzer.API.Helpers
 {
-    public class BitCoinService
+    public class BitCoinService : IBitCoinService
     {
         IDatabaseService _db;
 
@@ -19,8 +19,8 @@ namespace BitCoinAnalyzer.API.Helpers
             return _db.BitCoin.GetList(l => l.Timestamp > DateTime.Now.AddDays(-1))
                 .Select(s => new BitCoinChartModel
                 {
-                Price = s.Price,
-                Timestamp = $"{s.Timestamp.ToShortDateString()} : {s.Timestamp.ToShortTimeString()}",
+                    Price = s.Price,
+                    Timestamp = $"{s.Timestamp.ToShortDateString()} : {s.Timestamp.ToShortTimeString()}",
                 });
         }
 
@@ -37,6 +37,13 @@ namespace BitCoinAnalyzer.API.Helpers
                 .GroupBy(g => g.Timestamp.Day)
                 .Select(s => s.FirstOrDefault()).AsEnumerable();
         }
+    }
+
+    public interface IBitCoinService
+    {
+        IEnumerable<BitCoinChartModel> GetBitCoinDaily();
+        IEnumerable<BitCoin?> GetBitCoinMonthly();
+        IEnumerable<BitCoin?> GetBitCoinWeekly();
     }
 
     public class BitCoinChartModel

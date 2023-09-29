@@ -44,7 +44,7 @@ namespace BitCoinAnalyzer.API.Controllers
                     return BadRequest("Kullanıcı adı zaten alınmış");
                 }
                 _userService.RegisterUser(model);
-                return StatusCode(201, "Kullanıcı başarı ile oluşturuldu");
+                return CreatedAtAction("Register", model);
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace BitCoinAnalyzer.API.Controllers
 
             if (taken)
             {
-                return StatusCode(409, "Kullanıcı adı zaten alınmış");
+                return Conflict("Kullanıcı adı zaten alınmış");
             }
             else
             {
