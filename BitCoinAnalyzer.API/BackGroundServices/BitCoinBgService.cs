@@ -1,5 +1,6 @@
 ﻿using BitCoinAnalyzer.Data.DAL;
 using BitCoinAnalyzer.Entity;
+using BitCoinAnalyzer.Service.Abstract;
 using System.Text.Json;
 
 namespace BitCoinAnalyzer.API.BackGroundServices
@@ -23,7 +24,7 @@ namespace BitCoinAnalyzer.API.BackGroundServices
             {
                 using (var scope = _services.CreateScope())
                 {
-                    var dbContext = scope.ServiceProvider.GetRequiredService<BitCoinAnalyzerDbContext>();
+                    var _db = scope.ServiceProvider.GetRequiredService<IDatabaseService>();
                     var httpClient = scope.ServiceProvider.GetRequiredService<HttpClient>();
 
                     try
@@ -40,8 +41,8 @@ namespace BitCoinAnalyzer.API.BackGroundServices
                                 Timestamp = DateTime.Parse(bitcoinData.time.updatedISO).ToLocalTime(),
                             };
 
-                            dbContext.BitCoins.Add(bitcoinPrice);
-                            await dbContext.SaveChangesAsync();
+                            _db.BitCoin.Add(bitcoinPrice);
+                            _db.SaveChanges();
                         }
                     }
                     catch (Exception ex)
